@@ -42,7 +42,16 @@ def predict():
         
         print("hiiiiiiiiiiiiii "+result)
 
-        return render_template('result.html', result=result)
+        return render_template('result.html', 
+                               pregnancies=pregnancies,
+                               glucose=glucose,
+                               blood_pressure=blood_pressure,
+                               skin_thickness=skin_thickness,
+                               insulin=insulin,
+                               bmi=bmi,
+                               diabetes_pedigree_function=diabetes_pedigree_function,
+                               age=age,
+                               result=result)
 
 if __name__ == '__main__':
     app.run()
