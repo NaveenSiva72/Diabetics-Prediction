@@ -124,6 +124,8 @@ header {
 .header__form {
   width: 100%;
   max-width: 350px;
+  margin: 0 auto; /* Center the form horizontally */
+  text-align: center;
 }
 
 .header__form form {
@@ -133,6 +135,7 @@ header {
   background-color: var(--white);
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .header__form input {
@@ -163,6 +166,7 @@ header {
   font-weight: 700;
   color: var(--primary-color);
 }
+
 
 .service__header {
   display: flex;
