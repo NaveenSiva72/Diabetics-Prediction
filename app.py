@@ -10,7 +10,6 @@ model = joblib.load('trained_model.pkl')
 
 @app.route('/')
 def home():
-    print("hiiiii")
     return render_template('index.html')
 
 @app.route('/form')
@@ -37,10 +36,8 @@ def predict():
         # Make prediction
         prediction = model.predict(input_data)
         
-        # Convert prediction to human-readable format
+        # Convert the predicted model
         result = 'Diabetic' if prediction[0] == 1 else 'Non-Diabetic'
-        
-        print("hiiiiiiiiiiiiii "+result)
 
         return render_template('result.html', 
                                pregnancies=pregnancies,
