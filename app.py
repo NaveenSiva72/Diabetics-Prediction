@@ -6,7 +6,7 @@ import joblib
 app = Flask(__name__)
 
 # Load the trained model
-model = joblib.load('trained_model.pkl')
+model = joblib.load('C:\\NAVEEN_S\\example_react\\MLT_project\\Sanjeevi\\HEALTH-CARE\\trained_model1.pkl')
 
 @app.route('/')
 def home():

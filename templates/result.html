@@ -32,12 +32,12 @@
           patient-centered approach, we're dedicated to your well-being. Trust
           us with your health and experience the difference.
         </p>
-        <button class="btn">See Services</button>
+        
       </div>
     </div>
   </header>
 
-  <div class="header__form">
+  <div class="header__form" id="scrollTarget">
     {% if result == 'Diabetic' %}
         <h4>Oops! <span style="color: red;">You have diabetes</span>. Please consult a doctor.</h4>
       {% else %}
@@ -129,5 +129,18 @@
       </div>
     </div>
   </footer>
+  <script>
+    // Wait for the document to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      // Get the target element by its id
+      var targetElement = document.getElementById("scrollTarget");
+      
+      // Scroll to the target element
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  </script>
+  
 </body>
 </html>

@@ -9,6 +9,7 @@
     />
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
     <title>CODE AASHU | Health Care</title>
+    
   </head>
   <body>
     
@@ -35,11 +36,11 @@
             patient-centered approach, we're dedicated to your well-being. Trust
             us with your health and experience the difference.
           </p>
-          <button class="btn">See Services</button>
+          
         </div>
       </div>
     </header>
-    <div class="header__form">
+    <div class="header__form" id="scrollTarget">
       <form action="/predict" method="post">
         <div class="form-group">
           <label for="pregnancies">Pregnancies:</label>
@@ -138,5 +139,19 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Wait for the document to be fully loaded
+      document.addEventListener("DOMContentLoaded", function() {
+        // Get the target element by its id
+        var targetElement = document.getElementById("scrollTarget");
+        
+        // Scroll to the target element
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    </script>
+    
   </body>
 </html>
